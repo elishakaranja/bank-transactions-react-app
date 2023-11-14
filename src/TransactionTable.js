@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
-const TransactionTable = ({ newTransaction }) => {
-  const [transactions, setTransactions] = useState([]);
+const TransactionTable = ({ transactions }) => {
+ // const [transactions, setTransactions] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
 
   // Filtering the transactions by the search term
@@ -11,7 +11,7 @@ const TransactionTable = ({ newTransaction }) => {
 
   // Fetching transactions from the server when the component mounts and when a new transaction is added
   useEffect(() => {
-    fetch('http://localhost:8001/transactions')
+    fetch('https://my-json-server.typicode.com/elishakaranja/bank-transactions-react-app/transactions')
       .then((response) => response.json())
       .then((data) => {
         // Setting the fetched transactions to the state
@@ -30,7 +30,7 @@ const TransactionTable = ({ newTransaction }) => {
   // Deleting a transaction
   const deleteTransaction = (transactionId) => {
     // Making a DELETE request to the server to remove the transaction
-    fetch(`http://localhost:8001/transactions/${transactionId}`, {
+    fetch(`https://my-json-server.typicode.com/elishakaranja/bank-transactions-react-app/transactions/${transactionId}`, {
       method: 'DELETE',
     })
       .then((response) => response.json())

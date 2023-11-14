@@ -19,7 +19,7 @@ function App() {
       {/* TransactionForm component for adding new transactions */}
       <TransactionForm onTransactionAdded={handleTransactionAdded} />
       {/* TransactionTable component to display transactions */}
-      <TransactionTable  newTransaction={transactions} />
+      <TransactionTable  transactions={transactions} />
     </div>
   );
 }

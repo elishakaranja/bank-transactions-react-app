@@ -104,20 +104,6 @@
       "category": "food",
       "amount": "-17",
       "id": 15
-    },
-    {
-      "date": "2023-7-23",
-      "description": "cab",
-      "category": "travel",
-      "amount": "-18",
-      "id": 16
-    },
-    {
-      "date": "2023-09-23",
-      "description": "cab",
-      "category": "travel",
-      "amount": "76",
-      "id": 17
     }
   ]
 }
