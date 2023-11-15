@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
-const TransactionTable = ({ transactions }) => {
- // const [transactions, setTransactions] = useState([]);
+const TransactionTable = () => {
+  const [transactions, setTransactions] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
 
   // Filtering the transactions by the search term
@@ -20,7 +20,7 @@ const TransactionTable = ({ transactions }) => {
       .catch((error) => {
         console.error('Error fetching data:', error);
       });
-  }, [newTransaction]); // The dependency array now includes newTransaction
+  }, []); // The dependency array now includes newTransaction
 
   // Handling the search bar input change event
   const handleSearchChange = (event) => {

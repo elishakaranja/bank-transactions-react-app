@@ -14,7 +14,7 @@ const TransactionForm = ({ onTransactionAdded }) => {
     e.preventDefault();
 
     // Sending a request to add a new transaction
-    fetch('http://localhost:8001/transactions', {
+    fetch('https://my-json-server.typicode.com/elishakaranja/bank-transactions-react-app/transactions', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(formData),
